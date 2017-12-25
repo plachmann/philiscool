@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
             {
                 label: 'About',
                 icon: 'fa fa-user fa-fw',
+                routerLink: ['/'],
                 items: [{
                         label: 'Who is Phil?', 
                         icon: 'fa-question',
@@ -45,7 +46,8 @@ export class AppComponent implements OnInit {
             },
             {
                 label: 'Contact Me',
-                icon: 'fa fa-envelope'
+                icon: 'fa fa-envelope',
+                routerLink: ['/contact']
             }
         ];
     }

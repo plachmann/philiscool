@@ -1,0 +1,27 @@
+<p>So you want to contact me? Alright! Let's do this!</p>
+<p>Let me know how and can help you and how to best get in contact with you, weather that is by email, text, phone, smoke signal...whatever!</p>
+
+<p>Getting mail is so exciting!</p>
+<br>
+<form [formGroup]="sampleForm" (ngSubmit)="onSubmit(sampleForm.value)">
+    <span class="ui-float-label">
+    <input class="form-control" id="float-input" type="text" size="30" name="name" formControlName="name" pInputText> 
+    <label for="float-input">Your Name</label>
+    </span>
+    <br>
+    <span class="ui-float-label">
+    <input class="form-control" id="float-input" type="email" size="30" name="email" formControlName="email" pInputText> 
+    <label for="float-input">Email Address</label>
+    </span>
+    <br>
+    <span class="ui-float-label">
+    <textarea class="form-control" id="float-text" [rows]="5" [cols]="60" pInputTextarea autoResize="autoResize" name="whatcanidoforyou" formControlName="whatcanidoforyou"></textarea>
+    <label for="float-text">What can I do for you?</label>
+  </span>
+    <!-- <p-captcha siteKey="6LczPz4UAAAAAPLDdLHejwBMzlQ43nLVqNosuxHH" (onResponse)="showResponse($event)" initCallback="loadCaptcha"></p-captcha>
+    <br> -->
+    <button pButton type="submit" label="Send the Message!"></button>
+    <br>
+
+</form>
+<br>
