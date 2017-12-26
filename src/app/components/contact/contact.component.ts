@@ -12,7 +12,7 @@ import {
 })
 export class ContactComponent implements OnInit {
 
-  private sampleForm: FormGroup;
+  public sampleForm: FormGroup;
   constructor() {}
 
   ngOnInit() {

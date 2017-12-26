@@ -6,7 +6,9 @@ import {
   ConfirmDialogModule,
   MenubarModule,
   InputTextareaModule,
-  CaptchaModule
+  CaptchaModule,
+  PanelModule,
+  EditorModule
 } from "primeng/primeng";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
@@ -17,9 +19,10 @@ import { AngularFirestoreModule } from "angularfire2/firestore";
 import { environment } from "../environments/environment";
 import { ContactComponent } from "./components/contact/contact.component";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { EditblogComponent } from './components/editblog/editblog.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ContactComponent],
+  declarations: [AppComponent, HomeComponent, ContactComponent, EditblogComponent],
   imports: [
     BrowserModule,
     InputTextModule,
@@ -34,7 +37,9 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
     AngularFirestoreModule,
     MenubarModule,
     CaptchaModule,
-    FormsModule
+    FormsModule,
+    PanelModule,
+    EditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

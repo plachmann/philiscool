@@ -18,18 +18,9 @@ export class AppComponent implements OnInit {
     private setMenuItems() {
         this.items = [
             {
-                label: 'About',
+                label: 'Here\'s Phil',
                 icon: 'fa fa-user fa-fw',
-                routerLink: ['/'],
-                items: [{
-                        label: 'Who is Phil?', 
-                        icon: 'fa-question',
-                    },
-                    {
-                        label: 'Why is he Cool?', 
-                        icon: 'fa-question',
-                    }
-                ]
+                routerLink: ['/']
             },
            
             {
