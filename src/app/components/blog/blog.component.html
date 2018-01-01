@@ -1,0 +1,9 @@
+<p>
+    This is the blog.
+    <br> Posts should show newest first.
+</p>
+<br>
+<div *ngFor='let p of posts |async'>
+    <blogitem [post]="p"></blogitem>
+    <hr>
+</div>

@@ -1,19 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { AngularFirestore } from "angularfire2/firestore";
 
 @Component({
-  selector: 'app-editblog',
-  templateUrl: './editblog.component.html',
-  styleUrls: ['./editblog.component.css']
+  selector: "app-editblog",
+  templateUrl: "./editblog.component.html",
+  styleUrls: ["./editblog.component.scss"]
 })
 export class EditblogComponent implements OnInit {
+  public content: string;
+  public title: string;
+  public display = false;
 
-  public text1:string;
-
-  constructor() { }
+  constructor(private db: AngularFirestore) {}
 
   ngOnInit() {
-    /// this.text = "<h1>I love bacon!</h1><br><br><h2>And I like tomatoes.</h2>"
-    this.text1 = "abc 123";
+    this.content = "";
+    this.title = "";
   }
 
+  public onSave() {
+    let updated = new Date();
+    // Add a new document with a generated id.
+    var newCityRef = this.db
+      .collection("blogposts")
+      .add({
+        title: this.title,
+        content: this.content,
+        createDate: updated,
+        updateDate: updated
+      })
+      .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+        this.toggleDisplay();
+      })
+      .catch(function(error) {
+        console.error("Error adding document: ", error);
+      });
+  }
+
+  private toggleDisplay() {
+    this.display = !this.display;
+  }
 }
+

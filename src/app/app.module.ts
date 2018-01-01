@@ -8,7 +8,8 @@ import {
   InputTextareaModule,
   CaptchaModule,
   PanelModule,
-  EditorModule
+  EditorModule,
+  DialogModule
 } from "primeng/primeng";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
@@ -20,9 +21,12 @@ import { environment } from "../environments/environment";
 import { ContactComponent } from "./components/contact/contact.component";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { EditblogComponent } from './components/editblog/editblog.component';
+import { BlogpostService } from "./services/blogpost.service";
+import { BlogComponent } from './components/blog/blog.component';
+import { BlogitemComponent } from './components/blog/blogitem/blogitem.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ContactComponent, EditblogComponent],
+  declarations: [AppComponent, HomeComponent, ContactComponent, EditblogComponent, BlogComponent, BlogitemComponent],
   imports: [
     BrowserModule,
     InputTextModule,
@@ -39,9 +43,10 @@ import { EditblogComponent } from './components/editblog/editblog.component';
     CaptchaModule,
     FormsModule,
     PanelModule,
-    EditorModule
+    EditorModule,
+    DialogModule
   ],
-  providers: [],
+  providers: [BlogpostService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

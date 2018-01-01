@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { ContactComponent } from "./components/contact/contact.component";
 import { EditblogComponent } from "./components/editblog/editblog.component";
+import { BlogComponent } from "./components/blog/blog.component";
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: "admin/editblog",
     component: EditblogComponent
+  },
+  {
+    path: "blog",
+    component: BlogComponent
   }
 ];
 

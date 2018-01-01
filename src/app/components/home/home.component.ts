@@ -6,7 +6,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrls: ['./home.component.scss'],
   providers:  [ConfirmationService]
 })
 export class HomeComponent implements OnInit {

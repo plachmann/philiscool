@@ -3,7 +3,8 @@ import {MenubarModule,MenuItem} from 'primeng/primeng';
 
 @Component({
     selector: 'app-root',
-    templateUrl: 'app.component.html'
+    templateUrl: 'app.component.html',
+    styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
     
@@ -30,9 +31,10 @@ export class AppComponent implements OnInit {
             {
                 label: 'Blog',
                 icon: 'fa-edit',
+                routerLink: ['/blog'],
                 items: [
-                    {label: 'Professional', icon: 'fa-black-tie'},
-                    {label: 'Personal', icon: 'fa-newspaper-o'}
+                    {label: 'Professional', icon: 'fa-black-tie', routerLink: ['/blog']},
+                    {label: 'Personal', icon: 'fa-newspaper-o', routerLink: ['/blog']}
                 ]
             },
             {
