@@ -1,28 +1,16 @@
-import { AppComponent } from "./app.component";
-import { HomeComponent } from "./components/home/home.component";
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { ContactComponent } from "./components/contact/contact.component";
-import { EditblogComponent } from "./components/editblog/editblog.component";
-import { BlogComponent } from "./components/blog/blog.component";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import { WelcomeComponent } from './welcome/welcome.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { LoginComponent } from './auth/login/login.component';
+import { TrainingComponent } from './training/training.component';
 
 const routes: Routes = [
-  {
-    path: "",
-    component: HomeComponent
-  },
-  {
-    path: "contact",
-    component: ContactComponent
-  },
-  {
-    path: "admin/editblog",
-    component: EditblogComponent
-  },
-  {
-    path: "blog",
-    component: BlogComponent
-  }
+  { path: '', component: WelcomeComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'training', component: TrainingComponent }
 ];
 
 @NgModule({
