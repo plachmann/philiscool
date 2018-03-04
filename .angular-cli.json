@@ -18,16 +18,9 @@
         "testTsconfig": "tsconfig.spec.json",
         "prefix": "app",
         "styles": [
-            "sass/styles.scss",
-            "../node_modules/primeng/resources/themes/omega/theme.css",
-            "../node_modules/font-awesome/css/font-awesome.min.css",
-            "../node_modules/primeng/resources/primeng.min.css",
-            "../node_modules/quill/dist/quill.core.css",
-            "../node_modules/quill/dist/quill.snow.css"
+            "styles.css"
         ],
-        "scripts": [
-            "../node_modules/quill/dist/quill.js"
-        ],
+        "scripts": [],
         "environmentSource": "environments/environment.ts",
         "environments": {
             "dev": "environments/environment.ts",
@@ -58,7 +51,7 @@
         }
     },
     "defaults": {
-        "styleExt": "scss",
+        "styleExt": "css",
         "component": {}
     }
 }
