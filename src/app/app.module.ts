@@ -19,7 +19,16 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { AuthService } from './auth/auth.service';
 import { SkillsComponent } from './skills/skills.component';
-
+import { SonglistComponent } from './pheve/songlist/songlist.component';
+import { SongService } from './services/song.service';
+import { AngularFireModule } from "angularfire2";
+import { AngularFireAuthModule } from "angularfire2/auth";
+import { AngularFirestoreModule } from "angularfire2/firestore";
+import { environment } from "../environments/environment";
+import {
+  AngularFirestore,
+  AngularFirestoreDocument
+} from "angularfire2/firestore";
 
 @NgModule({
   declarations: [
@@ -34,7 +43,8 @@ import { SkillsComponent } from './skills/skills.component';
     HeaderComponent,
     SidenavListComponent,
     StopTrainingComponent,
-    SkillsComponent
+    SkillsComponent,
+    SonglistComponent
   ],
   imports: [
     BrowserModule,
@@ -43,9 +53,11 @@ import { SkillsComponent } from './skills/skills.component';
     AppRoutingModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, SongService, AngularFirestore],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 })
