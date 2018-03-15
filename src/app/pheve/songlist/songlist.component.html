@@ -1,7 +1,21 @@
-<h1>Items</h1>
+<h1>Pheve Song List</h1>
 
-<p>This page is a demo of a very basic todo list in Angular, using the Firebase Realtime DB on the backend.</p>
+
 
 <div *ngFor="let song of songs | async">
     {{song.title}} <br>
 </div>
+<hr>
+<mat-selection-list #shoes>
+    <mat-list-option *ngFor="let song of songs | async">
+        <div fxLayout="row">
+            <div class="song">{{song.title}}</div>
+            <div class="song">{{song.artist}}</div>
+            <div class="song">{{song.year}}</div>
+        </div>
+    </mat-list-option>
+</mat-selection-list>
+
+<p>
+    Songs selected: {{shoes.selectedOptions.selected.length}}
+</p>

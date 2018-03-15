@@ -29,6 +29,7 @@ import {
   AngularFirestore,
   AngularFirestoreDocument
 } from "angularfire2/firestore";
+import { AddComponent } from './pheve/songlist/add/add.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {
     SidenavListComponent,
     StopTrainingComponent,
     SkillsComponent,
-    SonglistComponent
+    SonglistComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
